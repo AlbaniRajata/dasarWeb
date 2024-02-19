@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat;
+    background-color: #335c67;
+    line-height: 1.65;
+    padding-bottom: 1000px;
+}
+
+.container-satu {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #e09f3e;
+    padding: 20px;
+    display: flex;
+}
+
+.kolom-utama {
+    color: #fff3b0;
+    order: 2;
+    flex: 2;
+}
+
+.sidebar-satu {
+    color: #fff3b0;
+    order: 1;
+    flex: 1;
+}
+
+.sidebar-dua {
+    color: #fff3b0;
+    order: 3;
+    flex: 1;
+}
+
+.link {
+    color: #335c67;
+    font-family: sa;
+}
