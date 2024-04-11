@@ -12,12 +12,12 @@
     if($id == "") {    
         $query = "INSERT into anggota (nama, jenis_kelamin, alamat, no_telp) VALUES (?, ?, ?, ?)";
         $sql = $db1->prepare($query);
-        $sql -> bind_param("sss", $nama, $jenis_kelamin, $alamat, $no_telp); 
+        $sql -> bind_param("ssss", $nama, $jenis_kelamin, $alamat, $no_telp); 
         $sql-> execute();
     } else {
         $query = "UPDATE anggota SET nama=?, jenis_kelamin=?, alamat=?, no_telp=? WHERE id=?";
         $sql = $db1->prepare($query);
-        $sql -> bind_param("sssi", $nama, $jenis_kelamin, $alamat, $no_telp, $id); 
+        $sql -> bind_param("ssssi", $nama, $jenis_kelamin, $alamat, $no_telp, $id); 
         $sql-> execute();
     }
 
