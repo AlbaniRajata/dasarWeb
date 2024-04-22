@@ -53,12 +53,21 @@
                                 <div class='modal-body'>
                                     <?= "Apakah Anda yakin ingin menghapus data dengan nama " . $row["nama"] . "?" ?> </div>
                                 <div class='modal-footer'>
-                                <a class='btn btn-danger' href='proses.php?aksi-hapus&id=<?= $row["id"] ?>'>Hapus</a>
+                                <a class='btn btn-danger' href='proses.php?aksi=hapus&id=<?= $row["id"] ?>'>Hapus</a>
                                 <button type='button' class='btn btn-secondary' data-dismiss='modal'>Batal</button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <script>
+                    function konfirmasiHapus(id, nama) {
+                        var konfirmasi = confirm("Apakah Anda yakin ingin menghapus data dengan nama " + nama + "?");
+                        if (konfirmasi) {
+                            window.location.href = "proses.php?aksi=hapus&id=" + id;
+                        }
+                    }
+                </script>
+                
                 <?php
             }
                 ?>
